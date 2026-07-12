@@ -1,0 +1,96 @@
+/* GLOBAL PAGE ANIMATION */
+
+* {
+    transition: all 0.3s ease;
+}
+
+
+/* Page Slide Animation */
+
+.page-animation {
+
+    animation: pageSlide 0.6s ease-in-out;
+
+}
+
+
+@keyframes pageSlide {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* Card Animation */
+
+.card-animation {
+
+    animation: cardShow 0.5s ease;
+
+}
+
+
+@keyframes cardShow {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(0.9);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+/* Button Hover */
+
+button {
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+
+button:hover {
+
+    transform:translateY(-3px);
+
+}
+
+
+/* Input Focus */
+
+input:focus {
+
+    outline:none;
+
+    transform:scale(1.02);
+
+}

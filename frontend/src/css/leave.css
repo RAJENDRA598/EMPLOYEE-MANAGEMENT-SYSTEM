@@ -1,0 +1,353 @@
+/* Leave Page */
+
+.leave-page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    background: linear-gradient(
+        135deg,
+        #0f3dc7,
+        #2f6ef4,
+        #5ea8ff
+    );
+
+}
+
+
+
+/* Content Area */
+
+.leave-content {
+
+    flex: 1;
+
+    padding: 30px;
+
+}
+
+
+
+/* Main Card */
+
+.leave-card {
+
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.2);
+
+    margin-top: 20px;
+
+}
+
+
+
+/* Heading */
+
+.leave-card h2 {
+
+    text-align: center;
+
+    color: #0f3dc7;
+
+    margin-bottom: 25px;
+
+    font-size: 28px;
+
+}
+
+
+
+
+
+/* Form */
+
+.leave-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    width: 50%;
+
+    margin: auto;
+
+}
+
+
+
+
+
+.leave-form input,
+
+.leave-form textarea {
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    border: 1px solid #ccc;
+
+    font-size: 15px;
+
+    outline: none;
+
+}
+
+
+
+
+
+.leave-form textarea {
+
+    height: 100px;
+
+    resize: none;
+
+}
+
+
+
+
+
+.leave-form input:focus,
+
+.leave-form textarea:focus {
+
+    border-color: #2f6ef4;
+
+}
+
+
+
+
+
+/* Apply Button */
+
+.leave-form button {
+
+    background: #0f3dc7;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+
+.leave-form button:hover {
+
+    background: #092c99;
+
+}
+
+
+
+
+
+
+/* Table */
+
+.leave-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 35px;
+
+}
+
+
+
+
+
+.leave-table th {
+
+    background: #0f3dc7;
+
+    color:white;
+
+    padding: 14px;
+
+    text-align:center;
+
+}
+
+
+
+
+
+.leave-table td {
+
+    padding: 12px;
+
+    text-align:center;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+
+
+
+
+.leave-table tr:hover {
+
+    background:#f5f8ff;
+
+}
+
+
+
+
+
+/* Status */
+
+.approved {
+
+    color:green;
+
+    font-weight:bold;
+
+}
+
+
+
+.rejected {
+
+    color:red;
+
+    font-weight:bold;
+
+}
+
+
+
+.pending {
+
+    color:#d48b00;
+
+    font-weight:bold;
+
+}
+
+
+
+
+
+
+/* Approve Button */
+
+.edit-btn {
+
+    background:#16a34a;
+
+    color:white;
+
+    border:none;
+
+    padding:8px 14px;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+    margin-right:8px;
+
+}
+
+
+
+.edit-btn:hover {
+
+    background:#12813a;
+
+}
+
+
+
+
+
+/* Reject/Delete Button */
+
+.delete-btn {
+
+    background:#dc2626;
+
+    color:white;
+
+    border:none;
+
+    padding:8px 14px;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+    margin:5px;
+
+}
+
+
+
+.delete-btn:hover {
+
+    background:#a91d1d;
+
+}
+
+
+
+
+
+
+/* Responsive */
+
+@media(max-width:900px){
+
+
+    .leave-content {
+
+        padding:15px;
+
+    }
+
+
+
+    .leave-form {
+
+        width:100%;
+
+    }
+
+
+
+    .leave-table {
+
+        display:block;
+
+        overflow-x:auto;
+
+    }
+
+
+}

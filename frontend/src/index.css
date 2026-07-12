@@ -1,0 +1,147 @@
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+
+
+body{
+
+    margin:0;
+    background:#f4f7fb;
+    color:#1f2937;
+    font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+}
+
+
+
+button,
+input,
+textarea{
+
+    font-family:inherit;
+
+}
+
+
+
+button{
+
+    cursor:pointer;
+
+}
+
+
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+
+
+::-webkit-scrollbar-thumb{
+
+    background:#2563eb;
+    border-radius:10px;
+
+}
+
+
+
+.fade-in{
+
+    animation:fadeIn .6s ease;
+
+}
+
+
+
+.slide-up{
+
+    animation:slideUp .6s ease;
+
+}
+
+
+
+@keyframes fadeIn{
+
+
+    from{
+
+        opacity:0;
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+    }
+
+
+}
+
+
+
+@keyframes slideUp{
+
+
+    from{
+
+        opacity:0;
+        transform:translateY(30px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+
+}
+
+
+
+@media(max-width:768px){
+
+
+    .dashboard-content{
+
+        padding:20px;
+
+    }
+
+
+
+    .page-header{
+
+        flex-direction:column;
+        gap:15px;
+
+    }
+
+
+
+    table{
+
+        font-size:14px;
+
+    }
+
+
+}

@@ -1,0 +1,100 @@
+.dashboard-page{
+
+    display:flex;
+
+    min-height:100vh;
+
+    background:linear-gradient(
+        135deg,
+        #0f3dc7 0%,
+        #2f6ef4 45%,
+        #5ea8ff 100%
+    );
+
+}
+
+/* Sidebar takes fixed width */
+
+.dashboard-content{
+
+    flex:1;
+
+    padding:40px;
+
+    background:transparent;
+
+}
+
+.dashboard-content h1{
+
+    font-size:40px;
+
+    margin-bottom:30px;
+
+    color:#1f2937;
+
+}
+
+.dashboard-cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    margin-bottom:40px;
+
+}
+
+.dashboard-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.dashboard-card h3{
+
+    color:#2563eb;
+
+    margin-bottom:20px;
+
+}
+
+.dashboard-card p{
+
+    font-size:35px;
+
+    font-weight:bold;
+
+}
+
+.recent-box{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    margin-top:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+@media(max-width:900px){
+
+.dashboard-cards{
+
+    grid-template-columns:1fr;
+
+}
+
+}

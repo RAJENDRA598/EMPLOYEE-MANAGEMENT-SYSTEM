@@ -1,0 +1,118 @@
+/* Page */
+
+.employee-page{
+    display:flex;
+    min-height:100vh;
+    background:linear-gradient(135deg,#2453d4,#6b92c9);
+}
+
+/* Right Side */
+
+.employee-content{
+    flex:1;
+    padding:40px;
+}
+
+/* Header */
+
+.employee-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.employee-header h1{
+    color:#fff;
+    font-size:40px;
+}
+
+/* Add Button */
+
+.add-btn{
+    background:#fff;
+    color:#2453d4;
+    padding:12px 22px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.add-btn:hover{
+    background:#2453d4;
+    color:#fff;
+}
+
+/* Card */
+
+.employee-card{
+    background:#fff;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+/* Search */
+
+.search-box{
+    margin-bottom:20px;
+}
+
+.search-box input{
+    width:100%;
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:16px;
+}
+
+/* Table */
+
+.employee-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.employee-table thead{
+    background:#2453d4;
+}
+
+.employee-table thead th{
+    color:#fff;
+    padding:15px;
+    text-align:left;
+}
+
+.employee-table tbody td{
+    padding:15px;
+    border-bottom:1px solid #ddd;
+}
+
+.employee-table tbody tr:hover{
+    background:#f4f8ff;
+}
+
+/* Buttons */
+
+.edit-btn{
+    background:#28a745;
+    color:#fff;
+    padding:8px 14px;
+    border-radius:6px;
+    text-decoration:none;
+    margin-right:10px;
+}
+
+.delete-btn{
+    background:#dc3545;
+    color:#fff;
+    border:none;
+    padding:8px 14px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.delete-btn:hover{
+    background:#bb2d3b;
+}
