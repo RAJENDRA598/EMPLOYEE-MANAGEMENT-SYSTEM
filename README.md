@@ -76,3 +76,45 @@ HR:
 
 
 ## 🏗 Project Structure
+EMPLOYEE-MANAGEMENT-SYSTEM
+
+│
+├── backend
+│ ├── Flask API
+│ ├── JWT Authentication
+│ └── PostgreSQL Connection
+│
+├── frontend
+│ ├── React Components
+│ ├── Pages
+│ └── CSS Styling
+│
+└── README.md
+
+
+
+## 🔐 User Roles
+
+| Role | Access |
+|------|--------|
+| Employee | Apply Leave, View Profile, Attendance |
+| Manager | Manage Employees, Approve Leave |
+| HR | Full Management Access |
+
+
+## ⚙️ Installation
+
+### Backend Setup
+cd backend
+
+pip install -r requirements.txt
+
+python app.py or py app.py
+
+
+### Frontend Setup
+cd frontend
+
+npm install
+
+npm run dev
