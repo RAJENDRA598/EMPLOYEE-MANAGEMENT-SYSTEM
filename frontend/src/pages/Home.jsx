@@ -88,32 +88,13 @@ function Home() {
 
                             to="/login"
 
-                            className="primary-btn"
+                            className="btn btn-primary"
 
                         >
 
-                            Get Started
+                            Sign In
 
                         </Link>
-
-
-
-
-
-
-
-                        <button
-
-                            className="secondary-btn"
-
-                            onClick={() => setShowLearn(!showLearn)}
-
-                        >
-
-                            Learn More
-
-                        </button>
-
 
 
 

@@ -299,40 +299,19 @@ def login_user():
 
 
 
+    token = jwt.encode({
 
+        "user_id": user[0],
 
+        "role": user[4],
 
+        "exp": datetime.datetime.utcnow() + datetime.timedelta(hours=24)
 
+    },
 
+    SECRET_KEY,
 
-    token = jwt.encode(
-
-        {
-
-
-            "user_id":
-            user[0],
-
-
-            "role":
-            user[4],
-
-
-            "exp":
-
-            datetime.datetime.utcnow()
-
-            +
-
-            datetime.timedelta(hours=24)
-
-        },
-
-
-        SECRET_KEY,
-
-
-        algorithm="HS256"
+    algorithm="HS256"
 
     )
 
@@ -467,6 +446,128 @@ def change_password():
         return jsonify({
 
             "message":
+            "User not found"
+
+        }),404
+
+
+
+
+
+
+    new_hash = generate_password_hash(
+        new_password
+    )
+
+
+
+
+
+
+    cur.execute("""
+
+        UPDATE users
+
+        SET password=%s
+
+        WHERE email=%s
+
+
+    """,
+
+    (
+
+        new_hash,
+
+        email
+
+    ))
+
+
+
+
+
+    conn.commit()
+
+
+    cur.close()
+
+    conn.close()
+
+
+
+
+
+    return jsonify({
+
+        "message":
+        "Password changed successfully"
+
+    })
+
+
+
+
+# -----------------------------------
+# Forgot Password
+# -----------------------------------
+
+def forgot_password():
+
+
+    data = request.get_json()
+
+
+
+    email = data.get("email")
+
+    new_password = data.get("new_password")
+
+
+
+
+
+
+    conn = get_connection()
+
+    cur = conn.cursor()
+
+
+
+
+
+    cur.execute("""
+
+        SELECT *
+
+        FROM users
+
+        WHERE email=%s
+
+
+    """,
+
+    (email,))
+
+
+
+    user = cur.fetchone()
+
+
+
+
+
+    if user is None:
+
+
+        cur.close()
+
+        conn.close()
+
+
+        return jsonify({
+
+            "message":
             "Current password is incorrect"
 
         }),400
@@ -522,6 +623,6 @@ def change_password():
     return jsonify({
 
         "message":
-        "Password changed successfully"
+        "Password reset successfully"
 
     })

@@ -12,12 +12,11 @@
 
     padding:30px;
 
-    background:
-    linear-gradient(
+    background:linear-gradient(
         135deg,
-        #1e3a8a,
-        #2563eb,
-        #60a5fa
+        #1e40af 0%,
+        #1e3a8a 50%,
+        #3b82f6 100%
     );
 
     background-size:300% 300%;
@@ -50,14 +49,13 @@
 
     max-width:450px;
 
-    background:rgb(246, 230, 230);
+    background:#ffffff;
 
     padding:35px;
 
-    border-radius:15px;
+    border-radius:12px;
 
-    box-shadow:
-    0 10px 30px rgba(0,0,0,0.15);
+    box-shadow:0 10px 40px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04);
 
 }
 
@@ -67,9 +65,13 @@
 
     text-align:center;
 
-    color:#2563eb;
+    color:#1e40af;
 
     margin-bottom:25px;
+
+    font-weight:600;
+
+    font-size:28px;
 
 }
 
@@ -84,11 +86,15 @@
 
     margin-bottom:15px;
 
-    border:1px solid #ddd;
+    border:1px solid #e2e8f0;
 
     border-radius:8px;
 
     outline:none;
+
+    transition:border-color 0.3s ease;
+
+    font-size:15px;
 
 }
 
@@ -97,7 +103,9 @@
 .form-container input:focus,
 .form-container textarea:focus{
 
-    border-color:#2563eb;
+    border-color:#3b82f6;
+
+    box-shadow:0 0 0 3px rgba(59, 130, 246, 0.1);
 
 }
 
@@ -107,15 +115,23 @@
 
     width:100%;
 
-    padding:13px;
+    padding:12px;
 
-    background:#2563eb;
+    margin-top:10px;
+
+    background:#1e40af;
 
     color:white;
 
     border:none;
 
     border-radius:8px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:all 0.3s ease;
 
     font-size:16px;
 
@@ -125,37 +141,66 @@
 
 .form-container button:hover{
 
-    background:#1d4ed8;
+    background:#1e3a8a;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 6px 20px rgba(30, 64, 175, 0.3);
 
 }
 
 
 
-.profile-card{
+.form-container a{
 
-    max-width:450px;
-
-    width:100%;
-
-    background:rgb(234, 144, 144);
-
-    padding:35px;
-
-    border-radius:15px;
+    display:block;
 
     text-align:center;
 
-    box-shadow:
-    0 10px 30px rgba(0,0,0,.15);
+    color:#3b82f6;
+
+    margin-top:15px;
+
+    font-size:14px;
+
+    transition:color 0.3s ease;
 
 }
 
 
 
-.profile-card h1{
+.form-container a:hover{
 
-    color:#2563eb;
+    color:#1e40af;
 
-    margin-bottom:25px;
+    text-decoration:underline;
+
+}
+
+
+
+.error-message{
+
+    color:#dc2626;
+
+    font-size:13px;
+
+    margin-top:-10px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.success-message{
+
+    color:#16a34a;
+
+    font-size:13px;
+
+    margin-top:-10px;
+
+    margin-bottom:10px;
 
 }

@@ -11,7 +11,8 @@ from create_tables import create_tables
 from auth import (
     register_user,
     login_user,
-    change_password
+    change_password,
+    forgot_password
 )
 
 
@@ -167,6 +168,15 @@ def login():
 def change_password_route():
 
     return change_password()
+
+
+
+
+@app.route("/forgot_password", methods=["PUT"])
+
+def forgot_password_route():
+
+    return forgot_password()
 
 
 

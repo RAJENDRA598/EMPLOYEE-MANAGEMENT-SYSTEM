@@ -1,17 +1,18 @@
 .add-employee-card{
-    background:#eac3c3;
-    border-radius:20px;
+    background:#ffffff;
+    border-radius:12px;
     padding:35px;
     max-width:850px;
     margin:0 auto;
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
 .add-employee-card h2{
     text-align:center;
-    color:#2563eb;
+    color:#1e40af;
     margin-bottom:30px;
     font-size:30px;
+    font-weight:600;
 }
 
 .form-grid{
@@ -29,23 +30,26 @@
     font-weight:600;
     margin-bottom:8px;
     color:#374151;
+    font-size:14px;
 }
 
 .form-group input,
-.form-group textarea{
+.form-group textarea,
+.form-group select{
     width:100%;
     padding:14px;
-    border:1px solid #d1d5db;
-    border-radius:10px;
+    border:1px solid #e2e8f0;
+    border-radius:8px;
     font-size:15px;
     outline:none;
-    transition:.3s;
+    transition:all 0.3s ease;
 }
 
 .form-group input:focus,
-.form-group textarea:focus{
-    border-color:#2563eb;
-    box-shadow:0 0 8px rgba(37,99,235,.2);
+.form-group textarea:focus,
+.form-group select:focus{
+    border-color:#3b82f6;
+    box-shadow:0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
 .form-group textarea{
@@ -61,16 +65,51 @@
     width:100%;
     margin-top:25px;
     padding:15px;
-    background:#2563eb;
+    background:#1e40af;
     color:white;
     border:none;
-    border-radius:10px;
+    border-radius:8px;
     font-size:18px;
     font-weight:600;
-    transition:.3s;
+    transition:all 0.3s ease;
+    cursor:pointer;
 }
 
 .submit-btn:hover{
-    background:#1d4ed8;
+    background:#1e3a8a;
     transform:translateY(-2px);
+    box-shadow:0 6px 20px rgba(30, 64, 175, 0.3);
+}
+
+.cancel-btn{
+    width:100%;
+    margin-top:10px;
+    padding:15px;
+    background:#6b7280;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:600;
+    transition:all 0.3s ease;
+    cursor:pointer;
+}
+
+.cancel-btn:hover{
+    background:#4b5563;
+    transform:translateY(-2px);
+}
+
+@media(max-width:900px){
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .full-width{
+        grid-column:1;
+    }
+
+    .add-employee-card{
+        padding:20px;
+    }
 }

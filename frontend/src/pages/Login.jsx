@@ -317,26 +317,24 @@ function Login() {
 
 
                 <p>
-
-
-                    Don't have an account?
-
-
-                    {" "}
-
-
-
-                    <Link to="/register">
-
-
-                        Register
-
-
+                    <Link to="/">
+                        Back to Home
                     </Link>
-
-
-
                 </p>
+
+                <p>
+                        <Link to="/forgot-password">
+                                Forgot Password?
+                        </Link>
+                </p>
+
+
+                <p>
+                     Don't have an account? {" "}
+                            <Link to="/register">
+                                    Register
+                            </Link>
+                    </p>
 
 
 

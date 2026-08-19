@@ -1,18 +1,17 @@
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 import api from "../api/api";
-import Sidebar from "../components/Sidebar";
-
 import "../css/changepassword.css";
 
-function ChangePassword() {
+function ForgotPassword() {
 
-    const email = localStorage.getItem("email");
+    const navigate = useNavigate();
 
     const [form, setForm] = useState({
 
-        current_password: "",
+        email: "",
         new_password: "",
         confirm_password: ""
 
@@ -36,7 +35,7 @@ function ChangePassword() {
 
         if (form.new_password !== form.confirm_password) {
 
-            toast.error("New passwords do not match");
+            toast.error("Passwords do not match");
 
             return;
 
@@ -44,23 +43,24 @@ function ChangePassword() {
 
         try {
 
-            await api.put("/change_password", {
+            await api.put("/forgot_password", {
 
-                email: email,
-                current_password: form.current_password,
+                email: form.email,
                 new_password: form.new_password
 
             });
 
-            toast.success("Password changed successfully");
+            toast.success("Password reset successfully");
 
             setForm({
 
-                current_password: "",
+                email: "",
                 new_password: "",
                 confirm_password: ""
 
             });
+
+            navigate("/login");
 
         } catch (error) {
 
@@ -68,7 +68,7 @@ function ChangePassword() {
 
                 error.response?.data?.message ||
 
-                "Password change failed"
+                "Password reset failed"
 
             );
 
@@ -80,21 +80,19 @@ function ChangePassword() {
 
         <div className="change-password-page">
 
-            <Sidebar />
-
             <div className="change-password-content">
 
                 <div className="password-card">
 
-                    <h2>Change Password</h2>
+                    <h2>Forgot Password</h2>
 
                     <form onSubmit={handleSubmit}>
 
                         <input
-                            type="password"
-                            name="current_password"
-                            placeholder="Current Password"
-                            value={form.current_password}
+                            type="email"
+                            name="email"
+                            placeholder="Enter Your Email"
+                            value={form.email}
                             onChange={handleChange}
                             required
                         />
@@ -119,11 +117,17 @@ function ChangePassword() {
 
                         <button type="submit">
 
-                            Change Password
+                            Reset Password
 
                         </button>
 
                     </form>
+
+                    <p>
+                        <Link to="/login">
+                            Back to Login
+                        </Link>
+                    </p>
 
                 </div>
 
@@ -135,4 +139,4 @@ function ChangePassword() {
 
 }
 
-export default ChangePassword;
+export default ForgotPassword;

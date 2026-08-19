@@ -3,7 +3,7 @@
 .resume-page{
     display:flex;
     min-height:100vh;
-    background:linear-gradient(135deg,#0f3dc7,#2f6ef4,#6aa8ff);
+    background:linear-gradient(to right, #1e40af, #1e3a8a, #3b82f6);
 }
 
 .resume-content{
@@ -12,27 +12,42 @@
     justify-content:center;
     align-items:center;
     padding:40px;
+    overflow-y:auto;
 }
 
 .resume-card{
-    width:900px;
+    width:100%;
+    max-width:900px;
     background:#ffffff;
-    border-radius:18px;
+    border-radius:12px;
     padding:30px;
-    box-shadow:0 10px 25px rgba(0,0,0,.2);
+    box-shadow:0 8px 30px rgba(0,0,0,0.08);
 }
 
 .resume-card h2{
     text-align:center;
-    color:#1d4ed8;
+    color:#1e40af;
     margin-bottom:25px;
-    font-size:32px;
+    font-size:28px;
+    font-weight:600;
 }
 
 .resume-form{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:15px;
+    gap:20px;
+}
+
+.resume-form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.resume-form-group label{
+    font-weight:600;
+    margin-bottom:8px;
+    color:#374151;
+    font-size:14px;
 }
 
 .resume-form input,
@@ -40,9 +55,17 @@
 .resume-form select{
     width:100%;
     padding:12px;
-    border:1px solid #d1d5db;
+    border:1px solid #e2e8f0;
     border-radius:8px;
     font-size:15px;
+    transition:border-color 0.3s ease;
+}
+
+.resume-form input:focus,
+.resume-form textarea:focus,
+.resume-form select:focus{
+    border-color:#3b82f6;
+    box-shadow:0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
 .resume-form textarea{
@@ -54,17 +77,20 @@
 .resume-form button{
     grid-column:1/3;
     padding:12px;
-    background:#2563eb;
+    background:#1e40af;
     color:white;
     border:none;
     border-radius:8px;
     font-size:16px;
+    font-weight:600;
     cursor:pointer;
-    transition:.3s;
+    transition:all 0.3s ease;
 }
 
 .resume-form button:hover{
-    background:#1d4ed8;
+    background:#1e3a8a;
+    transform:translateY(-2px);
+    box-shadow:0 6px 20px rgba(30, 64, 175, 0.3);
 }
 
 .resume-table{
@@ -74,73 +100,83 @@
 }
 
 .resume-table th{
-    background:#2563eb;
+    background:#1e40af;
     color:white;
     padding:12px;
-    text-align:center;
+    text-align:left;
+    font-weight:600;
 }
 
 .resume-table td{
     padding:12px;
-    border-bottom:1px solid #ddd;
-    text-align:center;
+    border-bottom:1px solid #e5e7eb;
+    text-align:left;
+    color:#374151;
 }
 
 .resume-table tr:nth-child(even){
-    background:#f8f9fa;
+    background:#f9fafb;
 }
 
 .resume-table tr:hover{
-    background:#eef4ff;
+    background:#f3f4f6;
 }
 
 .download-btn{
     padding:8px 15px;
-    background:#16a34a;
+    background:#10b981;
     color:white;
     border:none;
     border-radius:6px;
+    text-decoration:none;
+    font-weight:600;
+    font-size:13px;
+    transition:all 0.3s ease;
     cursor:pointer;
-    transition:.3s;
+    display:inline-block;
 }
 
 .download-btn:hover{
-    background:#15803d;
+    background:#059669;
+    transform:translateY(-2px);
 }
 
-.delete-btn{
+.delete-resume-btn{
     padding:8px 15px;
     background:#ef4444;
     color:white;
     border:none;
     border-radius:6px;
+    font-weight:600;
+    font-size:13px;
+    transition:all 0.3s ease;
     cursor:pointer;
-    transition:.3s;
+    margin-left:8px;
 }
 
-.delete-btn:hover{
+.delete-resume-btn:hover{
     background:#dc2626;
+    transform:translateY(-2px);
 }
 
-@media(max-width:768px){
-
-    .resume-card{
-        width:100%;
-        padding:20px;
-    }
-
+@media(max-width:900px){
     .resume-form{
         grid-template-columns:1fr;
     }
 
-    .resume-form textarea,
+    .resume-form textarea{
+        grid-column:1;
+    }
+
     .resume-form button{
         grid-column:1;
     }
 
-    .resume-table{
-        display:block;
-        overflow-x:auto;
+    .resume-card{
+        padding:20px;
     }
 
+    .resume-table{
+        font-size:14px;
+    }
 }

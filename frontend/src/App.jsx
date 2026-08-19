@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import ForgotPassword from "./pages/ForgotPassword";
 
 import Dashboard from "./pages/Dashboard";
 import EmployeeList from "./pages/EmployeeList";
@@ -10,7 +11,6 @@ import AddEmployee from "./pages/AddEmployee";
 import EditEmployee from "./pages/EditEmployee";
 
 import Profile from "./pages/Profile";
-import ChangePassword from "./pages/ChangePassword";
 
 import Leave from "./pages/Leave";
 import Attendance from "./pages/Attendance";
@@ -45,6 +45,11 @@ function App() {
             <Route 
                 path="/register" 
                 element={<Register />} 
+            />
+
+            <Route 
+                path="/forgot-password" 
+                element={<ForgotPassword />} 
             />
 
 
@@ -158,22 +163,6 @@ function App() {
 
 
 
-
-            <Route
-
-                path="/change-password"
-
-                element={
-
-                    <ProtectedRoute>
-
-                        <ChangePassword />
-
-                    </ProtectedRoute>
-
-                }
-
-            />
 
 
 

@@ -17,6 +17,9 @@ function Profile() {
     const role = 
         localStorage.getItem("role");
 
+    const employee_id = 
+        localStorage.getItem("employee_id");
+
 
 
     return (
@@ -35,65 +38,19 @@ function Profile() {
 
                 <div className="profile-card">
 
+                    <div className="profile-header">
 
+                        <div className="profile-avatar">
 
+                            👤
 
+                        </div>
 
-                    <div className="profile-avatar">
+                        <h2>
 
-                        👤
+                            {username}
 
-                    </div>
-
-
-
-
-
-                    <h2>
-
-                        {username}
-
-                    </h2>
-
-
-
-
-
-                    <div className="profile-box">
-
-
-                        <h4>
-
-                            📧 Email
-
-                        </h4>
-
-
-                        <p>
-
-                            {email}
-
-                        </p>
-
-
-                    </div>
-
-
-
-
-
-
-
-
-                    <div className="profile-box">
-
-
-                        <h4>
-
-                            💼 Role
-
-                        </h4>
-
+                        </h2>
 
                         <p>
 
@@ -101,13 +58,63 @@ function Profile() {
 
                         </p>
 
-
                     </div>
 
+                    <div className="profile-details">
 
+                        <div className="profile-box">
 
+                            <h4>📧 Email</h4>
 
+                            <p>
 
+                                {email}
+
+                            </p>
+
+                        </div>
+
+                        <div className="profile-box">
+
+                            <h4>💼 Role</h4>
+
+                            <p>
+
+                                {role}
+
+                            </p>
+
+                        </div>
+
+                        {employee_id && (
+
+                            <div className="profile-box">
+
+                                <h4>🆔 Employee ID</h4>
+
+                                <p>
+
+                                    {employee_id}
+
+                                </p>
+
+                            </div>
+
+                        )}
+
+                        <div className="profile-box">
+
+                            <h4>📅 Member Since</h4>
+
+                            <p>
+
+                                {new Date().getFullYear()}
+
+                            </p>
+
+                        </div>
+
+                    </div>
 
                 </div>
 

@@ -15,7 +15,7 @@ function Sidebar() {
         localStorage.removeItem("email");
         localStorage.removeItem("role");
 
-        navigate("/login");
+        navigate("/");
 
     };
 
@@ -52,14 +52,6 @@ function Sidebar() {
                     👥 Employees
                 </Link>
 
-                <Link to="/profile">
-                    👤 Profile
-                </Link>
-
-                <Link to="/change-password">
-                    🔒 Change Password
-                </Link>
-
                 <Link to="/leave">
                     📅 Leave
                 </Link>
@@ -79,6 +71,10 @@ function Sidebar() {
                         📈 Performance
                     </Link>
                 )}
+
+                <Link to="/profile">
+                    👤 Profile
+                </Link>
 
             </nav>
 
